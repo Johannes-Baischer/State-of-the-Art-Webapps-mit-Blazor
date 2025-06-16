@@ -1,0 +1,60 @@
+﻿@page "/learningapps"
+@attribute [Authorize(Roles = "Student, Teacher")]
+@attribute [Authorize(Policy = "EmailIsVerified")]
+
+@layout MainLayout
+
+@using SharedComponents.Pages.LearningApps.Model
+@inherits LearningAppsBase
+
+<PageTitle>@Localizer[Localization.learning_apps]</PageTitle>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <p>@Localizer[Localization.you_are_not_logged_in]</p>
+    </NotAuthorized>
+
+    <Authorized>
+        @if (LearningApps == null)
+        {
+            // TODO: Add a loading spinner
+            <p>@Localizer[Localization.loading]</p>
+        }
+        else
+        {
+            <div class="learningapps">
+                <div class="learningapps__selection">
+                    <h1>@Localizer[Localization.have_you_tried]</h1>
+                    <div class="learningapps__selection__selected">
+                        @if (SelectedLearningApp != null)
+                        {
+                        <LearningAppCard Data=SelectedLearningApp NavigationManager=NavigationManager />
+                        }
+                    </div>
+
+                    <div class="learningapps__selection__featured">
+                        <h1>@Localizer[Localization.featured]</h1>
+
+                        @foreach (LearningAppData la in FeaturedLearningApps!)
+                        {
+                            <LearningAppCard Data=la NavigationManager=NavigationManager />
+                        }
+                    </div>
+                </div>
+
+                <div class="learningapps__all">
+                    <h1>@Localizer[Localization.learning_apps]</h1>
+                    <div class="learningapps__all__apps">
+                        @foreach (LearningAppData la in LearningApps!)
+                        {
+                            <LearningAppCard Data=la NavigationManager=NavigationManager />
+                        }
+                    </div>
+                    <div class="learningapps__all__overlay"></div>
+                </div> 
+            </div>
+        }
+        
+    </Authorized>
+    
+</AuthorizeView>

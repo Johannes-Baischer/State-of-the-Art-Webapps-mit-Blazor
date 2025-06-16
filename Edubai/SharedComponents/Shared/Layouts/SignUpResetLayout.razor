@@ -1,0 +1,23 @@
+﻿@inherits LayoutComponentBase
+
+@attribute [AllowAnonymous]
+
+@inject IPlatformInfo PlatformInfo
+@inject IStringLocalizer<Localization> Localizer
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorage
+
+<div class="signupreset-container">
+	@Body
+</div>
+
+<footer>
+	<p>
+		@Localizer[Localization.EduBai]
+		<i class="oi oi-account-login"></i>
+		@Localizer[Localization.created_by]
+		<a target="_blank" href="#">
+			@Localizer[Localization.Johannes_Baischer]
+		</a>
+	</p>
+</footer>

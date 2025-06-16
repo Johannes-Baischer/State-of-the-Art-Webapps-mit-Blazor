@@ -1,0 +1,129 @@
+﻿/*Light Mode Colors*/
+@media (prefers-color-scheme: light) {
+    * {
+        --blue-rgb: 33 150 243;
+        --primary-rgb: var(--blue-rgb);
+        --highlight1-rgb: 255 255 255;
+        --highlight2-rgb: 142 191 222;
+        --blob-color-1: rgb(var(--blue-rgb));
+        --blob-color-2: dodgerblue;
+    }
+}
+
+/*Dark Mode Colors*/
+@media (prefers-color-scheme: dark) {
+    * {
+        --blue-rgb: 33 150 243;
+        --primary-rgb: var(--blue-rgb);
+        --highlight1-rgb: 255 255 255;
+        --highlight2-rgb: 142 191 222;
+        --blob-color-1: rgb(var(--blue-rgb));
+        --blob-color-2: dodgerblue;
+    }
+}
+
+* {
+    --transition-timeSlow: 1s;
+    --transition-timeFast: 0.25s;
+    /*outline: 1px solid red;*/
+}
+
+.screen {
+    aspect-ratio: 10/16;
+    max-width: 55%;
+    width: auto;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px rgb(var(--primary-rgb) / 50%);
+    border-radius: 1rem;
+    background-color: rgb(var(--highlight1-rgb) / 40%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    padding: 0.5rem;
+}
+
+/*screen__form*/
+.screen__form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 1rem;
+    overflow: hidden;
+    left: 10%;
+    right: 10%;
+}
+
+.screen__form-email, .screen__form-password, .screen__form-submit {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid rgb(var(--primary-rgb) / 50%);
+    border-radius: 0.6rem;
+    background-color: rgb(var(--primary-rgb) / 40%);
+    color: rgb(var(--highlight1-rgb));
+    font-size: 1.25rem;
+    font-family: "Source Code Pro", monospace;
+    transition-timing-function: ease-out;
+    transition-duration: var(--transition-timeFast);
+    transition-property: border-color, border-width;
+    box-shadow: 5px rgb(var(--primary-rgb) / 60%);
+    outline: none;
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding: 0rem 1rem;
+    text-align: center;
+}
+
+    .screen__form-email:is(:focus, :hover),
+    .screen__form-password:is(:focus, :hover),
+    .screen__form-submit:is(:focus, :hover) {
+        border-color: rgb(var(--primary-rgb));
+        border-width: 3px;
+    }
+
+
+/*screen__form-role*/
+
+.screen__form-role {
+    --gap-between-roles: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-between-roles);
+    position: relative;
+    width: 100%;
+}
+
+    .screen__form-role > label > input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .screen__form-role > label {
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        cursor: unset;
+        opacity: 0.5;
+        transition: all var(--transition-timeFast);
+        width: 100%;
+        max-width: calc((100% - var(--gap-between-roles)) / 2);
+        height: fit-content;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: larger;
+        text-align: center;
+        border-radius: 0.6rem;
+        color: rgb(var(--highlight1-rgb));
+    }
+
+        .screen__form-role > label:has(:hover, :checked, :focus) {
+            background-color: rgb(var(--primary-rgb) / 40%);
+            cursor: pointer;
+            opacity: 1;
+        }

@@ -1,0 +1,13 @@
+﻿@layout DefaultLayout
+
+@using SharedComponents.Pages.LearningApps.Model
+@inherits LearningAppCardBase
+
+<div class="card">
+    <div class="card__content" @onclick="(() => Controller.RouteToLearningApp(Data.ID))">
+        <img class="card__icon" src="_content/SharedComponents/images/H5P/Icons/@Data.Icon" />
+        <h2 class="card__title">@Data.DisplayTitle</h2>
+        <p class="card__desc">@Data.Description</p>
+    </div>
+    <div class="card__frame"></div>
+</div>

@@ -1,0 +1,30 @@
+﻿@page "/signup"
+@attribute [AllowAnonymous]
+
+@using SharedComponents.Pages.SignUp.Model;
+@inherits SignUpBase
+@layout SignUpResetLayout
+
+<PageTitle>@Localizer[Localization.sign_up]</PageTitle>
+
+
+<div class="screen">
+    <form class="screen__form">
+        <div class="screen__form-role">
+            <label for="role_teacher">
+                <input type="radio" id="role_teacher" name="role" checked="@(Role == Roles.Teacher)" @onchange="@(() => Role = Roles.Teacher)">
+                <img src="_content/SharedComponents/images/Login/teacher-role.svg" />
+                <span>@Localizer[Localization.teacher]</span>
+            </label>
+            <label for="role_student">
+                <input type="radio" id="role_student" name="role" checked="@(Role == Roles.Student)" @onchange="@(() => Role = Roles.Student)">
+                <img src="_content/SharedComponents/images/Login/student-role.svg" />
+                <span>@Localizer[Localization.student]</span>
+            </label>
+        </div>
+        <input class="screen__form-email" type="email" id="email" name="user-email" placeholder=@Localizer[Localization.email] @bind=@Email>
+        <input class="screen__form-password" type="password" id="password" name="password" placeholder=@Localizer[Localization.password] @bind=@Password>
+        <input class="screen__form-submit" type="button" @onclick='() => Controller.CreateNewUser()' value=@Localizer[Localization.create_account]>
+    </form>
+</div>
+

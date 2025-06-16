@@ -1,0 +1,18 @@
+﻿@page "/dashboard"
+@attribute [Authorize(Roles = "Student, Teacher")]
+@attribute [Authorize(Policy = "EmailIsVerified")]
+
+@layout MainLayout
+
+<PageTitle>dashboard</PageTitle>
+
+<h1>Dashboard</h1>
+
+<AuthorizeView>
+    <Authorized>
+        <p>Hello, @context.User.Identity?.Name!</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not logged in.</p>
+    </NotAuthorized>
+</AuthorizeView>

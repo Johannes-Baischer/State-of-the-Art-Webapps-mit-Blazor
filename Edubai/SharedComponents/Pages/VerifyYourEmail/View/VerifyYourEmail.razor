@@ -1,0 +1,23 @@
+﻿@page "/verifyyouremail"
+@attribute [Authorize(Roles = "Student, Teacher")]
+@layout SignUpResetLayout
+
+@using SharedComponents.Pages.VerifyYourEmail.Model
+@inherits VerifyYourEmailBase
+
+<PageTitle>@Localizer[Localization.please_verify_your_email]</PageTitle>
+
+<h1>@Localizer[Localization.please_verify_your_email]</h1>
+
+<div class="screen">
+    <p id="welcome-p">@Localizer[Localization.welcome] @Email!</p>
+    <p id="verify-p">@Localizer[Localization.please_verify_your_email_text]</p>
+    <div id="logo">
+        <div id="logo--teacher">
+            <img src="_content/SharedComponents/images/Login/teacher-role.svg" />
+        </div>
+        <div id="logo--student">
+            <img src="_content/SharedComponents/images/Login/student-role.svg" />
+        </div>
+    </div>
+</div>

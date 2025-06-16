@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Edubai</title>
+    <base href="/" />
+    <link rel="stylesheet" href="_content/SharedComponents/css/bootstrap/bootstrap.min.css" />
+    <link href="_content/SharedComponents/css/app.css" rel="stylesheet" />
+    <link href="BlazorMaui.styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="status-bar-safe-area"></div>
+
+    <div id="app">Loading...</div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js'></script>
+    <script src='_content/SharedComponents/js/h5p-standalone/main.bundle.js'></script>
+
+    <!-- JS interop imports -->
+    <script src='_content/SharedComponents/js/example-js-not-with-razor.js' type="module"></script>
+    <script src='_content/SharedComponents/Pages/Login/View/Login.razor.js' type="module"></script>
+    <script src='_content/SharedComponents/Pages/H5PContent/View/H5PContent.razor.js' type="module"></script>
+
+
+    <!-- Blazor JS Framework -->
+    <script src="_framework/blazor.webview.js" autostart="false"></script>
+</body>
+
+</html>

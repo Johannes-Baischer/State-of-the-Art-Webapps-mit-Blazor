@@ -1,0 +1,149 @@
+﻿* {
+    /*outline: 1px solid red;*/
+
+    transition: all 0.3s;
+    --card-padding: 1rem;
+    --card-height: 200px;
+    --h1-size: 2rem;
+    --h1-pad: var(--card-padding);
+}
+
+h1 {
+    font-size: var(--h1-size);
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+    padding-left: calc(var(--h1-pad) * 0.5);
+    color: rgb(var(--primary-rgb));
+}
+
+.learningapps {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-padding);
+}
+
+.learningapps__selection {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    margin-left: var(--card-padding);
+    margin-right: var(--card-padding);
+    padding-top: calc(var(--card-padding) * 1);
+    padding-bottom: calc(var(--card-padding) * 0.25);
+}
+    .learningapps__selection h1 {
+        padding-left: var(--h1-pad);
+        padding-right: var(--h1-pad);
+        max-height: var(--card-height);
+        text-align: center;
+        line-height: 100%;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    .learningapps__selection::-webkit-scrollbar {
+        height: 1rem;
+    }
+
+    .learningapps__selection::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+    }
+
+    .learningapps__selection::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(300deg, rgb(78, 171, 186) 0%, rgb(8, 91, 109) 70%);
+        box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+        border-radius: 5px;
+    }
+
+.learningapps__selection__selected {
+    flex: 1;
+    padding-left: calc(var(--card-padding) * 0.5);
+    padding-right: calc(var(--card-padding) * 0.5);
+}
+
+.learningapps__selection__featured {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--card-padding) * 0.5);
+}
+
+.learningapps__all {
+    position: relative;
+    flex: 1;
+}
+
+    .learningapps__all h1 {
+        position: absolute;
+    }
+
+.learningapps__all__overlay {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - var(--h1-size) - var(--h1-pad));
+    top: calc(var(--h1-size) + var(--h1-pad));
+    z-index: -1;
+    box-shadow: 0 0 20px 0 rgb(var(--background-rgb) / 50%);
+    box-shadow: inset 0px -150px 100px -100px rgb(var(--background-rgb) / 50%);
+}
+
+.learningapps__all__apps {
+    position: absolute;
+    width: 100%;
+    max-height: calc(100% - var(--h1-size) - var(--h1-pad));
+    top: calc(var(--h1-size) + var(--h1-pad));
+    padding: var(--card-padding);
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /*Grid based on width (see below)*/
+    grid-gap: calc(var(--card-padding) * 0.5);
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+/*Grid based on width of Viewport*/
+/*Note the ascending order due to style overloading*/
+
+@media (min-width: 500px) {
+    .learningapps__all__apps {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .learningapps__all__apps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .learningapps__all__apps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1500px) {
+    .learningapps__all__apps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1700px) {
+    .learningapps__all__apps {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/*Mobile Media Query*/
+@media (max-width: 640px) {
+    .learningapps__selection {
+    }
+
+    .learningapps__all {
+        flex: 1;
+    }
+}

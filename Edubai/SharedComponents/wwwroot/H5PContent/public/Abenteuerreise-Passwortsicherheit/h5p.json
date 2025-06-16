@@ -1,0 +1,103 @@
+{
+  "embedTypes": [
+    "div"
+  ],
+  "language": "und",
+  "title": "Abenteuerreise Passwortsicherheit",
+  "mainLibrary": "H5P.GameMap",
+  "license": "CC BY-NC-SA",
+  "defaultLanguage": "en",
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.Image",
+      "majorVersion": 1,
+      "minorVersion": 1
+    },
+    {
+      "machineName": "H5P.DragText",
+      "majorVersion": 1,
+      "minorVersion": 10
+    },
+    {
+      "machineName": "FontAwesome",
+      "majorVersion": 4,
+      "minorVersion": 5
+    },
+    {
+      "machineName": "jQuery.ui",
+      "majorVersion": 1,
+      "minorVersion": 10
+    },
+    {
+      "machineName": "H5P.JoubelUI",
+      "majorVersion": 1,
+      "minorVersion": 3
+    },
+    {
+      "machineName": "H5P.Transition",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.FontIcons",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.Question",
+      "majorVersion": 1,
+      "minorVersion": 5
+    },
+    {
+      "machineName": "H5P.AdvancedText",
+      "majorVersion": 1,
+      "minorVersion": 1
+    },
+    {
+      "machineName": "H5P.MultiChoice",
+      "majorVersion": 1,
+      "minorVersion": 16
+    },
+    {
+      "machineName": "H5P.MultiMediaChoice",
+      "majorVersion": 0,
+      "minorVersion": 3
+    },
+    {
+      "machineName": "H5P.MaterialDesignIcons",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.MemoryGame",
+      "majorVersion": 1,
+      "minorVersion": 3
+    },
+    {
+      "machineName": "H5P.Timer",
+      "majorVersion": 0,
+      "minorVersion": 4
+    },
+    {
+      "machineName": "H5P.SoundJS",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.GameMap",
+      "majorVersion": 1,
+      "minorVersion": 2
+    }
+  ],
+  "extraTitle": "Abenteuerreise Passwortsicherheit",
+  "authors": [
+    {
+      "name": "Johannes Baischer",
+      "role": "Author"
+    }
+  ],
+  "licenseVersion": "4.0",
+  "authorComments": "{&quot;ID&quot;: &quot;Abenteuerreise-Passwortsicherheit&quot;, &quot;DisplayTitle&quot;: &quot;Abenteuerreise Passwortsicherheit&quot;, &quot;Icon&quot;: &quot;game-map.png&quot;, &quot;Description&quot;: &quot;Bekämpfe das böse Hackermonster indem du deine Passwörter schützt!&quot;, &quot;Subjects&quot;: [&quot;Digitale Grundbildung&quot;, &quot;Informatik&quot;], &quot;Audience&quot;: &quot;5. Schulstufe&quot;}",
+  "yearFrom": 2025,
+  "yearTo": 2025
+}

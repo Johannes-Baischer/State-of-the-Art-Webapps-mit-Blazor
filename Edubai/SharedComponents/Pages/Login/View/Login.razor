@@ -1,0 +1,36 @@
+﻿@page "/login"
+@attribute [AllowAnonymous]
+
+@layout LoginLayout
+
+@using SharedComponents.Pages.Login.Model
+@inherits LoginBase
+
+<PageTitle>@Localizer[Localization.login]</PageTitle>
+<div class="screen">
+    <div class="screen__image"></div>
+    <div class="screen__overlay"></div>
+    <div class="screen__content">
+        <i class="screen__icon oi oi-account-login"></i>
+        <div class="screen__title">
+            <span class="screen__title-name" data-value=@Localizer[Localization.sign_in]>@Localizer[Localization.sign_in]</span>
+            <a class="screen__title-link" href="/" target="_self">EduBai</a>
+        </div>
+        <div class="screen__inputOptions">
+            <form class="screen__form">
+                <input class="screen__form-email" type="email" id="email" name="user-email" placeholder=@Localizer[Localization.email] @bind=@Email>
+                <input class="screen__form-password" type="password" id="password" name="password" placeholder=@Localizer[Localization.password] @bind=@Password>
+                <input class="screen__form-submit" type="button" @onclick='() => Controller.Login()' value=@Localizer[Localization.login]>
+            </form>
+            <div class="screen__advancedOptions">
+                <a class="screen__advancedOptions-link" href="/forgotpassword">@Localizer[Localization.forgot_password]</a>
+                <a class="screen__advancedOptions-link" href="/signup">@Localizer[Localization.sign_up]</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="blob"></div>
+<div id="blur"></div>
+
+

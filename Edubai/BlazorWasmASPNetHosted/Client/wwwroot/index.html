@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Edubai</title>
+    <base href="/" />
+    <link href="_content/SharedComponents/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="_content/SharedComponents/css/app.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="_content/SharedComponents/favicon.png" />
+    <link href="BlazorWasmClient.styles.css" rel="stylesheet" />
+    <link href="_content/SharedComponents/manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="_content/SharedComponents/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="_content/SharedComponents/icon-192.png" />
+</head>
+
+<body>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js'></script>
+    <script src='_content/SharedComponents/js/h5p-standalone/main.bundle.js'></script>
+
+    <!-- JS interop imports -->
+    <script src='_content/SharedComponents/js/example-js-not-with-razor.js' type="module"></script>
+    <script src='_content/SharedComponents/Pages/Login/View/Login.razor.js' type="module"></script>
+    <script src='_content/SharedComponents/Pages/H5PContent/View/H5PContent.razor.js' type="module"></script>
+
+    <!-- Blazor JS Framework -->
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+
+</body>
+
+</html>

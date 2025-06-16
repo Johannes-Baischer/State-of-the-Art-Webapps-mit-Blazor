@@ -1,0 +1,37 @@
+* {
+    --footer-height: 3.5rem;
+}
+
+.login-container {
+    background-color: rgb(var(--background-rgb) / 80%);
+    inset: 0;
+    display: grid;
+    place-items: center;
+    margin-bottom: var(--footer-height);
+    overflow: hidden;
+    position: absolute;
+}
+
+footer {
+    height: var(--footer-height);
+    background-color: #222;
+    color: #fff;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+    footer i {
+    }
+
+    footer p {
+        margin: 1em 0;
+    }
+
+    footer a {
+        color: #3c97bf;
+        text-decoration: none;
+    }

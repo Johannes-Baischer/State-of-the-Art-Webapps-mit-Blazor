@@ -1,0 +1,61 @@
+﻿.learningapp{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.learningapp__heading {
+    margin: 0;
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(var(--primary-rgb));
+    text-align: center;
+}
+
+.learningapp__description {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+
+    color: rgb(var(--primary-rgb));
+    text-align: justify-all;
+}
+
+.learningapp__feedbacklink{
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(var(--primary-rgb));
+}
+
+#h5p-container {
+    --h5p-spacing: 1rem;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0 var(--h5p-spacing) 0 var(--h5p-spacing);
+    transform: scale(0.95);
+}
+
+    #h5p-container::-webkit-scrollbar {
+        height: 0;
+        width: 1rem;
+    }
+
+    #h5p-container::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+    }
+
+    #h5p-container::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(300deg, rgb(78, 171, 186) 0%, rgb(8, 91, 109) 70%);
+        box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+        border-radius: 5px;
+    }

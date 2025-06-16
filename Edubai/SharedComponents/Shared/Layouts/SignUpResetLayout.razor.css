@@ -1,0 +1,55 @@
+/*Light Mode Colors*/
+@media (prefers-color-scheme: light) {
+    * {
+        --background1-rgb: 30 200 200;
+        --background2-rgb: 220 250 250;
+    }
+}
+
+/*Dark Mode Colors*/
+@media (prefers-color-scheme: dark) {
+    * {
+        --background1-rgb: 54 79 100;
+        --background2-rgb: 154 179 200;
+    }
+}
+
+* {
+    --footer-height: 3.5rem;
+}
+
+footer {
+    height: 3.5em;
+    background-color: #222;
+    color: #fff;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+    footer i {
+    }
+
+    footer p {
+        margin: 1em 0;
+    }
+
+    footer a {
+        color: #3c97bf;
+        text-decoration: none;
+    }
+
+.signupreset-container {
+    background: linear-gradient(15deg, rgb(var(--background1-rgb) / 50%) 0%, rgb(var(--background1-rgb) / 1%) 100%);
+    inset: 0;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--footer-height);
+    overflow: hidden;
+    position: absolute;
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Johan\Downloads\edubai</_PublishTargetUrl>
+    <History>True|2025-04-01T19:49:36.3324171Z;True|2025-03-21T20:29:21.1166932+01:00;True|2025-03-20T13:48:31.9815190+01:00;True|2025-03-18T22:10:30.2841928+01:00;True|2025-03-18T21:04:53.2686602+01:00;True|2025-03-18T20:37:00.8900518+01:00;True|2025-03-15T19:58:45.8659064+01:00;True|2025-03-15T19:24:11.4807379+01:00;True|2025-03-15T19:23:44.5442743+01:00;True|2025-03-14T09:17:04.0123988+01:00;True|2024-07-18T15:35:30.4028255+02:00;True|2024-07-16T23:07:16.9195973+02:00;True|2024-07-16T22:09:21.3075097+02:00;True|2024-07-16T21:56:05.9128462+02:00;False|2024-07-16T21:55:15.6346646+02:00;False|2024-07-16T21:43:46.7390272+02:00;True|2024-07-16T20:53:17.2393333+02:00;True|2024-04-27T23:30:12.0709172+02:00;True|2024-04-27T23:29:43.8105483+02:00;True|2024-04-27T23:10:20.3425374+02:00;True|2024-04-27T22:26:38.5646226+02:00;True|2024-04-27T21:39:11.7963555+02:00;False|2024-04-27T21:33:48.1161533+02:00;False|2024-04-27T21:33:03.8519787+02:00;True|2024-02-14T18:24:40.7240458+01:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>&lt;Connection String Here&gt;</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="EdubaiPostgreSQL">
+      <Value>Host=homebai.duckdns.org:5432%3bUsername=edubai%3bPassword=&lt;Password&gt;%3bDatabase=edubai</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+﻿@page "/LearningApps/{H5PID}"
+@attribute [Authorize(Roles = "Student, Teacher")]
+@attribute [Authorize(Policy = "EmailIsVerified")]
+
+@layout MainLayout
+
+@using SharedComponents.Pages.H5PContent.Model
+@inherits H5PContentBase
+
+<PageTitle>@H5PID</PageTitle>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <p>@Localizer[Localization.you_are_not_logged_in]</p>
+    </NotAuthorized>
+
+    <Authorized>
+        @if (LearningAppData == null)
+        {
+            // TODO: Add a loading spinner
+            <p>@Localizer[Localization.loading]</p>
+        }
+        else
+        {
+            <div class="learningapp">
+                <h1 class="learningapp__heading">@LearningAppData.DisplayTitle</h1>
+                <p class="learningapp__description">@LearningAppData.Description</p>
+                <a class="learningapp__feedbacklink" target="_blank" href="https://padlet.com/johannesbaischer/feedback-zu-den-lernapps-3wrs7gb5f78k9vw8" >@Localizer[Localization.give_feedback_here]</a>
+                <div id="h5p-container"></div>
+            </div>
+        }
+    </Authorized>
+</AuthorizeView>

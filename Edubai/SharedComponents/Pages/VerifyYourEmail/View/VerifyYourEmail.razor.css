@@ -1,0 +1,115 @@
+﻿/*Light Mode Colors*/
+@media (prefers-color-scheme: light) {
+    * {
+        --blue-rgb: 33 150 243;
+        --primary-rgb: var(--blue-rgb);
+        --highlight1-rgb: 255 255 255;
+        --highlight2-rgb: 142 191 222;
+        --blob-color-1: rgb(var(--blue-rgb));
+        --blob-color-2: dodgerblue;
+    }
+}
+
+/*Dark Mode Colors*/
+@media (prefers-color-scheme: dark) {
+    * {
+        --blue-rgb: 33 150 243;
+        --primary-rgb: var(--blue-rgb);
+        --highlight1-rgb: 255 255 255;
+        --highlight2-rgb: 142 191 222;
+        --blob-color-1: rgb(var(--blue-rgb));
+        --blob-color-2: dodgerblue;
+    }
+}
+
+* {
+    --transition-timeSlow: 1s;
+    --transition-timeFast: 0.25s;
+    /*outline: 1px solid red;*/
+
+    --logo-size: 10rem;
+}
+
+.screen {
+    max-width: 60%;
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px rgb(var(--primary-rgb) / 50%);
+    border-radius: 1rem;
+    background-color: rgb(var(--highlight1-rgb) / 40%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    padding: 3rem 1rem;
+    margin: 3rem 1rem;
+}
+
+#welcome-p {
+    font-size: 2rem;
+    font-style: unset;
+    font-weight: bold;
+}
+
+p {
+    flex-grow: 20;
+
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    color: rgb(var(--primary-rgb));
+    height: fit-content;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(var(--primary-rgb));
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+#logo {
+    position: relative;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(var(--primary-rgb) / 80%);
+    box-shadow: 0px 0px 10px 5px rgb(var(--primary-rgb) / 50%);
+    background-color: rgb(var(--highlight1-rgb) / 40%);
+}
+
+#logo--teacher, #logo--student {
+    --spacing: 0px;
+    --cut-width: 2px;
+    --short: calc(100% - var(--cut-width));
+    position: absolute;
+}
+
+#logo--teacher img,
+#logo--student img {
+    filter: invert(50%) sepia(100%) hue-rotate(160deg) saturate(3);
+}
+
+#logo--student {
+    transform: translateX(-var(--spacing)) translateY(-var(--spacing));
+}
+
+    #logo--student img {
+        clip-path: polygon(0 0, 0 100%, calc(var(--short) - 50%) 100%, calc(var(--short) - 50%) 0);
+    }
+
+#logo--teacher {
+    transform: translateX(var(--spacing)) translateY(var(--spacing));
+}
+
+    #logo--teacher img {
+        clip-path: polygon(100% 100%, 100% 0, calc(50% + var(--cut-width)) 0, calc(50% + var(--cut-width)) 100%);
+    }
